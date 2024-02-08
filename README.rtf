@@ -1,0 +1,92 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh16580\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qc\partightenfactor0
+
+\f0\b\fs36 \cf0 \ul \ulc0 User Guide for the analysis of amino acids surrounding unmodified and UbKEKSylated lysines in human proteome
+\f1\b0 \ulnone .
+\fs24 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+This package contains 2 short codes which can be run in any software or application supporting Python language:\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}
+\f0\b Analysis_sequences_from_diGly_IP.py 
+\f1\b0 : Measure the number of appearance for each amino acids depending on the position \ul for known sequences measuring exactly 31 residues\ulnone .\
+{\listtext	\uc0\u8226 	}
+\f0\b Analysis_lysines_from_protein_database.py 
+\f1\b0 : Measure the number of appearance for each amino acids depending on the position \ul for full protein sequences gathered in a FASTA format\ulnone .\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs28 \cf0 \ul System requirements:
+\f1\b0\fs24 \ulnone \
+
+\f0\b Operating systems: 
+\f1\b0 Works on Windows 10 (or higher) and on macOS Catalina 10.15.6 (or higher), when using any software capable of running short Python scripts (Anaconda, Jupyter, IDLE, etc\'85).\
+
+\f0\b \
+This script version has been tested on: 
+\f1\b0 Two data sets with different sizes. The small data set is composed of 655 sequences (each one being exactly 31 residues long) and contains 655 lysine environments . The large data set features 20 386 proteins sequences under a FASTA format and contains 651 306 lysine environments.
+\f0\b \
+\
+Additional software (optional):
+\f1\b0  To obtain a list of sequences containing exactly 31 residues and study the UbKEKSylation sites in the human proteome, we identified modified lysines via the MaxQuant software (version 1.6.17.0). By doing so, we obtained an Excel file containing the sequence from position -15 to +15 surrounding each modified lysine.\
+\
+\
+
+\f0\b\fs28 \ul Installation guide:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b0\fs24 \cf0 \ulnone If a software or application capable of running short Python script is already available on your computer, no installation is required. Just run the script.\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs28 \cf0 \ul Demo:
+\f1\b0\fs24 \ulnone \
+
+\f0\b Instruction to run on demo data: 
+\f1\b0 To run our data, be sure to place furnished demo files in the same directory as the Python script. Next, run the script !\
+
+\f0\b \
+Expected output: 
+\f1\b0 A matrix in a format 21 x 31 is expected as a final output. Each line represents a position in the sequence. Line 16 is expected to be only lysine residues (all amino acids except lysine should present a value equal to 0. Each column indicated which amino acid is considered (in the following order A, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, Y, X ; where X corresponds to a gap). Exemples of expected output with our 2 data sets is available in this package. Please note that small intermediary files may appear to allow you to access, every step of the analysis.
+\f0\b \
+\
+Expected run time for demo files:
+\f1\b0  For our small demo data set (655 lysine environments), output was obtained instantly. For our large demo data set (651 306 lysine environments), output was obtained within 15 seconds of run time.\
+\
+\
+
+\f0\b\fs28 \ul Instructions for use:
+\f1\b0\fs24 \ulnone \
+
+\f0\b How to run the script on your data: 
+\f1\b0 Please follow those simple steps:\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	1.	}Register your data under a .txt file and be sure to place this file in the same directory as our Python script. Partial sequence of 31 residues should be organized as our demo file (1 line = 1 sequence) for the script Analysis_sequences_from_diGly_IP.py. Full proteins sequences should be under a FASTA format for the script  Analysis_lysines_from_protein_database.py.\
+{\listtext	2.	}Depending on the chosen script, replace the name of the text file to open by the name of your data in line 59 (for Analysis_sequences_from_diGly_IP.py) or line 11 (for Analysis_lysines_from_protein_database.py).\
+{\listtext	3.	}Run the script. Run time may vary depending on the size of your data set.\
+{\listtext	4.	}The script will generate a matrix with your results. Each line represents a position in the sequence. Line 16 is expected to be only lysine residues (all amino acids excepte lysine should presented a value equal to 0. Each column indicates which amino acid is found (in the following order A, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, Y, X ; where X corresponds to a gap). \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Reproduction instructions: 
+\f1\b0 Files used for our published analysis were provided as demo files. Please refer to the demo paragraph if you wish to reproduce our results.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qc\partightenfactor0
+
+\f0\b \cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+CREATORS: LAB BOISVERT, UNIVERSITY OF SHERBROOKE (QC, CANADA)\
+This work is licensed under Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) - 2024}
